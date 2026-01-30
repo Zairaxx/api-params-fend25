@@ -1,6 +1,8 @@
 //URLSearchParams
 
 
+//EXEMPEL
+
 let params = new URLSearchParams();
 
 params.append("userID", 5);
@@ -24,15 +26,18 @@ btn.addEventListener("click", () => {
     let params = new URLSearchParams();
 
     if(colorInput.value !== ""){
-    params.append("color", colorInput.value)
+        params.append("color", colorInput.value)
+        params.append("size", 43)
     }
 
-    //Ta bort parameter
-    params.delete("color")
+    console.log(myURL + params.toString());
+    //EXEMPEL-METODER
+    // Ta bort parameter
+    // params.delete("color")
 
-    //Kolla om det finns en paramater
-    params.has("color")
+    // Kolla om det finns en parameter
+    // params.has("color")
 
-    //Ändra en existerande parameter
-    params.set("color","black");
+    // //Ändra en existerande parameter
+    // params.set("color","black");
 })
